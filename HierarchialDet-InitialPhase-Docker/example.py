@@ -8,7 +8,7 @@ config_file = './configs/swintest.py'
 cfg = Config.fromfile(config_file)
 file = './test/val_15.png'
 img = mmcv.imread(file)
-checkpoint_file = './configs/epoch_12.pth'
+checkpoint_file = '/content/DENTEX-1/HierarchialDet-InitialPhase-Docker/configs/epoch_12.pth'
 model = init_detector(cfg, checkpoint_file, device='cuda')
 new_result = inference_detector(model, img)
 pred = new_result.pred_instances.cpu().numpy()
