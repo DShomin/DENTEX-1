@@ -4,8 +4,8 @@ RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 RUN groupadd -r user && useradd -m --no-log-init -r -g user user
 
-RUN mkdir -p /opt/app /input /output \
-    && chown user:user /opt/app /input /output
+RUN mkdir -p /opt/app /input /output /test \
+    && chown user:user /opt/app /input /output /test
 
 USER user
 WORKDIR /opt/app
