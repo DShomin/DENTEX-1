@@ -54,6 +54,7 @@ def test():
             
     detection["boxes"] = boxes
     output_file = "/output/abnormal-teeth-detection.json"
+    print(detection)
     with open(output_file, "w") as f:
         json.dump(detection, f)
 
