@@ -30,7 +30,7 @@ def run_mmdetection(image,image_id):
         bbox_r = [round(i) for i in bbox]
         cat1 = int(enum/10)-1
         cat2 = enum%10-1
-        corners = [bbox[1], bbox[0], image_id], [bbox[1], bbox[2], image_id], [bbox[3], bbox[2], image_id], [bbox[3], bbox[0], image_id]
+        corners = [[float(bbox[1]), float(bbox[0]), image_id], [float(bbox[1]), float(bbox[2]), image_id], [float(bbox[3]), float(bbox[2]), image_id], [float(bbox[3]), float(bbox[0]), image_id]]
         #[x1, y1, image_id], [x2, y2, image_id], [x3, y3, image_id], [x4, y4, image_id]
         output['name'] = str(cat1)+'-'+str(cat2)+'-'+'1'
         output['corners'] = corners
