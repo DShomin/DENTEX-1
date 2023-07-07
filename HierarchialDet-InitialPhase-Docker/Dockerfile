@@ -12,11 +12,11 @@ WORKDIR /opt/app
 
 ENV PATH="/home/user/.local/bin:${PATH}"
 
-# RUN python -m pip install --user -U pip && python -m pip install --user pip-tools
+RUN python -m pip install --user -U pip && python -m pip install --user pip-tools
 
 
 COPY --chown=user:user requirements.txt /opt/app/
-RUN pip install -r requirements.txt
+RUN python -m piptools sync requirements.txt
 RUN pip install -U openmim && mim install mmengine && mim install "mmcv>=2.0.0" && mim install mmdet 
 
 COPY --chown=user:user detectron2 /opt/app/detectron2

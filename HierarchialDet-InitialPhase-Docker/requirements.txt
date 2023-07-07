@@ -100,7 +100,7 @@ simpleitk==2.2.1
 # timm==0.9.2
 torch==1.13.0
 # cloudpickle
-torchvision==0.14.0
+# torchvision==0.14.0
 # omegaconf
 # fairscale
 # # The following packages are considered to be unsafe in a requirements file:
