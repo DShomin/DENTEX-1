@@ -56,7 +56,7 @@ def test():
     output_file = "/output/abnormal-teeth-detection.json"
     print(detection)
     with open(output_file, "w") as f:
-        json.dump(detection, f)
+        json.dump(str(detection), f)
 
 
 if __name__ == "__main__":
