@@ -24,5 +24,6 @@ COPY --chown=user:user hierarchialdet /opt/app/hierarchialdet
 COPY --chown=user:user configs /opt/app/configs
 
 COPY --chown=user:user process.py /opt/app/
+COPY --chown=user:user test.py /opt/app/
 
 ENTRYPOINT [ "python", "-m", "process" ]
