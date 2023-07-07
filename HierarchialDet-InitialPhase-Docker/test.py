@@ -11,7 +11,7 @@ def run_mmdetection(image,image_id):
     cfg = Config.fromfile(config_file)
     img = mmcv.imread(image)
     checkpoint_file = './configs/epoch_12.pth'
-    model = init_detector(cfg, checkpoint_file, device='cuda')
+    model = init_detector(cfg, checkpoint_file)
     new_result = inference_detector(model, img)
     pred = new_result.pred_instances.cpu().numpy()
     Threshold = 0.7
