@@ -2,4 +2,4 @@
 
 ./build.sh
 
-docker save hierarchialdet | gzip -c > HierarchialDet.tar.gz
+docker save hierarchialdet | gzip -c > HierarchialDet_2.tar.gz
